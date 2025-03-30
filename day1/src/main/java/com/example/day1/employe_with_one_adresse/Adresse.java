@@ -1,4 +1,4 @@
-package com.example.employe_with_one_adresse;
+package com.example.day1.employe_with_one_adresse;
 
 import jakarta.persistence.Embeddable;
 
