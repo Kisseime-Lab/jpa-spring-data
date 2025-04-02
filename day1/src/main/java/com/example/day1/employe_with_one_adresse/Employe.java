@@ -1,21 +1,18 @@
 package com.example.day1.employe_with_one_adresse;
 
 import java.util.List;
+import java.util.UUID;
 
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Employe {
     
     @Id
-    @GeneratedValue(strategy= GenerationType.UUID)
     private String id;
-
     private String nom;
     private String prenom;
 
@@ -31,6 +28,10 @@ public class Employe {
 
     public String getNom() {
         return nom;
+    }
+
+    public Employe() {
+        this.id = UUID.randomUUID().toString();
     }
 
     public String getPrenom() {
