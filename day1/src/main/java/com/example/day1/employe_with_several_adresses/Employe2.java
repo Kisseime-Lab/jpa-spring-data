@@ -3,6 +3,7 @@ package com.example.day1.employe_with_several_adresses;
 import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -17,7 +18,7 @@ public class Employe2 {
     private String nom;
     private String prenom;
 
-    @ManyToMany(mappedBy = "employes")
+    @ManyToMany(mappedBy = "employes", cascade = CascadeType.ALL)
     private List<Adresse2> adresse;
 
     @ElementCollection
