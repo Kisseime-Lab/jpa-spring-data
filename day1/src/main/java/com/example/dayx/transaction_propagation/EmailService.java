@@ -7,9 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class EmailService {
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void sendEmail() {
-        throw new RuntimeException("Fail sending email");
-        // System.out.println("Email sent !");
+        System.out.println("Sending email to ");
+        throw new RuntimeException("Failed to send email");
+
     }
 }

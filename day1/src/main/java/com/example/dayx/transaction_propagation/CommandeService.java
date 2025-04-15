@@ -1,6 +1,7 @@
 package com.example.dayx.transaction_propagation;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CommandeService {
@@ -17,6 +18,7 @@ public class CommandeService {
         return repository.save(commande);
     }
 
+    @Transactional
     public Commande saveCommande(Commande commande) {
         return repository.save(commande);
     }
