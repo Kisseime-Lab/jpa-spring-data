@@ -21,12 +21,6 @@ public class TestController {
     @Autowired
     private BankingServiceB bankingServiceB;
 
-    @Autowired
-    private AccountRepository repository;
-
-    @Autowired
-    private EntityManager em;
-
     @GetMapping("/isolation")
     public void testIsolation() {
         Long accountId = 1L;
